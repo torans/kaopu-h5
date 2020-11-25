@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 13.33vw">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="sharecontent" data-msg-img="../images/logo300.png" data-msg-content="一个稳定，领先的移动创业平台">
+    <link rel="shortcut icon" href="https://yun.bizika.cloud/assets/images/h5/min-logo.png">
+    <title>邀请你加入靠谱伙伴</title>
+    <link rel="stylesheet" href="./register_files/swiper-4.1.6.min.css">
+    <style>
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        input {
+            border: 0;
+            outline: 0;
+        }
+
+        .img-top-name {
+            position: absolute;
+            top: 0.46rem;
+            left: 2.3rem;
+            width: 2.92rem;
+            height: 0.82rem;
+            object-fit: contain;
+        }
+
+        .img-top-rectangle-2 {
+            position: absolute;
+            top: 0.7rem;
+            left: 0.96rem;
+            width: 0.6rem;
+            height: 0.6rem;
+            object-fit: contain;
+        }
+
+        .img-top-rectangle-1 {
+            position: absolute;
+            top: 0.88rem;
+            left: 0.3rem;
+            width: 0.8rem;
+            height: 0.8rem;
+            object-fit: contain;
+        }
+
+        .img-top-oval-2 {
+            position: absolute;
+            top: 3.94rem;
+            right: 0;
+            width: 0.92rem;
+            height: 0.92rem;
+            object-fit: contain;
+        }
+
+        .img-top-oval-1 {
+            position: absolute;
+            top: 4.42rem;
+            right: 0.62rem;
+            width: 0.72rem;
+            height: 0.72rem;
+            object-fit: contain;
+        }
+
+        .img-top-headline-1 {
+            position: absolute;
+            top: 2.02rem;
+            left: 0.66rem;
+            width: 3.84rem;
+            height: 1.92rem;
+            object-fit: contain;
+        }
+
+        .img-top-headline-2 {
+            position: absolute;
+            top: 2.02rem;
+            right: 0.26rem;
+            width: 4.04rem;
+            height: 1.92rem;
+            object-fit: contain;
+        }
+
+        .content {
+            position: absolute;
+            top: 8.16rem;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .content .invite {
+            padding: 0;
+            margin: 0;
+            font-family: SourceHanSansHWSC;
+            font-size: 0.32rem;
+            color: #ffc2c2;
+        }
+
+        .content .invite #invite_man_name {
+            font-size: 0.32rem;
+            color: #fff700;
+        }
+
+        .content .phone {
+            margin-top: 0.32rem;
+            margin-bottom: 0.48rem;
+            font-size: 0.28rem;
+            width: 5.92rem;
+            height: 1.04rem;
+            box-sizing: border-box;
+            border-radius: 0.50rem;
+            background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+            box-shadow: inset 0 0.04rem 0.08rem 0 rgba(255, 0, 0, 0.5);
+            text-align: center;
+            outline: 0;
+            border: 0;
+        }
+
+        .content .btn-join {
+            width: 5.92rem;
+            height: 1.04rem;
+            object-fit: contain;
+            box-shadow: 0 0.48rem 0.48rem 0 rgba(196, 72, 0, 0.5);
+        }
+
+        .content .img-word-1 {
+            position: relative;
+        }
+
+        .content .img-word-1 img {
+            display: block;
+            margin: 0 auto;
+            margin-top: 0.72rem;
+            margin-bottom: 0.70rem;
+            width: 3.2rem;
+            height: 0.48rem;
+            object-fit: contain;
+        }
+
+        .content .img-title-1 {
+            position: relative;
+        }
+
+        .content .img-title-1 .line {
+            position: absolute;
+            z-index: 1;
+            top: 0.4rem;
+            width: 100%;
+            height: 1px;
+            opacity: 0.8;
+            background-color: #bb3838;
+            box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.25), inset 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+        }
+
+        .content .img-title-1 img {
+            position: relative;
+            z-index: 2;
+            width: 4.16rem;
+            height: 0.82rem;
+            object-fit: contain;
+        }
+
+        .content .perfect {
+            height: 0.48rem;
+            line-height: 0.48rem;
+            font-family: SourceHanSansHWSC;
+            font-size: 0.32rem;
+            color: #ffc2c2;
+        }
+
+        .content .send {
+            height: 0.36rem;
+            line-height: 0.36rem;
+            font-family: SourceHanSansHWSC;
+            font-size: 0.24rem;
+            color: #ffc2c2;
+            margin-top: 0.16rem;
+            margin-bottom: 0.32rem;
+        }
+
+        .content .send_again {
+            position: relative;
+        }
+
+        .content .send_again .code {
+            position: absolute;
+            font-size: 0.36rem;
+            top: 0.1rem;
+            left: 0.56rem;
+            height: 0.8rem;
+            box-sizing: border-box;
+        }
+
+        .content .send_again, .content .set_password {
+            position: relative;
+            color: #333336;
+            margin: 0 auto;
+            width: 5.92rem;
+            height: 1.04rem;
+            line-height: 1.04rem;
+            box-sizing: border-box;
+            border-radius: 0.5rem;
+            background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+            box-shadow: inset 0 0.04rem 0.08rem 0 rgba(255, 0, 0, 0.5);
+            margin-bottom: 0.5rem;
+        }
+
+        .content .set_password span {
+            position: absolute;
+            left: 0.56rem;
+            font-size: 0.28rem;
+        }
+
+        .content .set_password input {
+            position: absolute;
+            width: 2.4rem;
+            height: 0.8rem;
+            left: 2.44rem;
+            top: 0.1rem;
+            font-size: 0.28rem;
+            box-sizing: border-box;
+        }
+
+        .content .send_again .again {
+            font-size: 0.28rem;
+            position: absolute;
+            right: 0.29rem;
+            top: 0.03rem;
+            color: #ffaa00;
+            display: inline-block;
+            width: 1.4rem;
+            text-align: center;
+        }
+
+        .content .send_again .line {
+            display: inline-block;
+            position: absolute;
+            top: 0.28rem;
+            right: 1.7rem;
+            width: 1px;
+            height: 0.48rem;
+            background-color: #d8d8d8;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            position: absolute;
+            top: 0;
+            /* left: -3.96rem; */
+            width: 99rem;
+        }
+
+        ul li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            /* float: left; */
+            width: 4.8rem !important;
+            /* height: 2.76rem; */
+            margin-right: 0.48rem;
+            border-radius: 0.16rem;
+            background-image: linear-gradient(to bottom, #ffffff, #ffdede 88%, #ffb7b7);
+            box-shadow: 0 0.48rem 0.48rem 0 rgba(159, 0, 0, 0.5);
+            background: url(https://yun.bizika.cloud/assets/images/h5/img-institution-bg@2x.png) no-repeat;
+            background-size: cover;
+            text-align: center;
+
+        }
+
+        ul li span:first-child {
+            position: absolute;
+            top: 0;
+            left: 0.2rem;
+            -webkit-background-clip: text;
+            background-clip: text;
+            font-size: 0.48rem;
+            font-family: Arial;
+            font-weight: 900;
+            -webkit-text-fill-color: transparent;
+            background-image: radial-gradient(circle at 50% 4%, #fff9a7, #ffe200);
+        }
+
+        ul li span:nth-child(2), ul li span:last-child {
+            font-family: SourceHanSansSC;
+            font-size: 0.64rem;
+            font-weight: 500;
+            color: #ff8932;
+            text-shadow: 0 0.04rem 0.08rem rgba(255, 121, 50, 0.4);
+        }
+
+        ul li span:nth-child(2) {
+            display: inline-block;
+            height: 0.94rem;
+            line-height: 0.94rem;
+            margin-top: 0.8rem;
+        }
+
+        ul li span:last-child {
+            display: inline-block;
+            font-size: 0.36rem;
+            height: 0.54rem;
+            line-height: 0.54rem;
+        }
+
+        .img-title-2 {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 8.06rem;
+
+        }
+
+        .img-title-2 .line {
+            position: absolute;
+            z-index: 1;
+            top: 0.4rem;
+            width: 100%;
+            height: 1px;
+            opacity: 0.8;
+            background-color: #bb3838;
+            box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.25), inset 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+        }
+
+        .img-title-2 img {
+            position: relative;
+            z-index: 2;
+            width: 4.82rem;
+            height: 0.82rem;
+            object-fit: contain;
+        }
+
+        .img_platform_content {
+            position: absolute;
+            bottom: 0.2rem;
+            left: 0.15rem;
+            width: 7.2rem;
+            object-fit: contain;
+        }
+
+        input::-webkit-input-placeholder {
+            color: #c0c0c4;
+        }
+
+        input::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: #c0c0c4;
+        }
+
+        input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: #c0c0c4;
+        }
+
+        input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #c0c0c4;
+        }
+    </style>
+</head>
+<body style="margin: 0 auto; min-height: 27.46rem; padding: 0; width: 7.50rem; font-size: 0.24rem; background: url(https://yun.bizika.cloud/assets/images/h5/background.jpg) no-repeat; background-size: cover; position: relative; text-align: center;">
+<img src="./register_files/logo300.png" style="position:absolute;z-index:-1;opacity:0;left:0;width:0;">
+<img src="./register_files/img-top-name@2x.png" class="img-top-name">
+<img src="./register_files/img-top-rectangle-2@2x.png" class="img-top-rectangle-2">
+<img src="./register_files/img-top-rectangle-1@2x.png" class="img-top-rectangle-1">
+<img src="./register_files/img-top-oval-1@2x.png" class="img-top-oval-1">
+<img src="./register_files/img-top-oval-2@2x.png" class="img-top-oval-2">
+<img src="./register_files/img-top-headline-1@2x.png" class="img-top-headline-1">
+<img src="./register_files/img-top-headline-2@2x.png" class="img-top-headline-2">
+<div class="content">
+    <div id="join">
+        <p class="invite"><span id="invite_man_name">云商伙伴 </span>邀请你加入靠谱伙伴</p>
+        <input type="tel" placeholder="请输入手机号码" class="phone" id="phone_num" maxlength="11">
+    </div>
+    <div id="join_soon" style="display: none">
+        <p class="perfect">完善信息，立即加入</p>
+        <p class="send">验证码已发送到您的手机<span id="tel_num"></span></p>
+        <div class="send_again">
+            <input type="tel" placeholder="请输入验证码" class="code" id="identifying_code" maxlength="6">
+            <span class="line"></span>
+            <span class="again" id="re_send"
+                  onclick="sendCode(document.getElementById(&#39;phone_num&#39;).value)">重新发送</span>
+        </div>
+        <div class="set_password">
+            <span>请设置密码</span>
+            <input type="password" placeholder="6-16位登陆密码" id="login_password" maxlength="16">
+        </div>
+        <label style="color: #ffc2c2; top: -14px; position: relative;">
+            <input type="checkbox" checked="true" style="vertical-align: middle;">阅读并同意 《<a
+                href="https://yun.bizika.cloud/h5/argument" target="_blank" style="color: #ffc2c2;">云商伙伴支付经销商协议</a>》
+        </label>
+    </div>
+    <img src="./register_files/btn-join@2x.png" class="btn-join" id="submit">
+    <div class="img-word-1">
+        <img src="./register_files/img-word-1@2x.png">
+    </div>
+    <div class="img-title-1">
+        <div class="line"></div>
+        <img src="./register_files/img-title-1@2x.png">
+    </div>
+</div>
+
+<div style="overflow: hidden; position: absolute; top: 14.86rem; left: 0; width: 7.5rem; height: 2.76rem"
+     class="swiper-container swiper-container-horizontal" id="carousel">
+    <ul class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-6664px, 0px, 0px);">
+        <li class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0">
+            <span>1</span>
+            <span>激活补贴</span><br>
+            <span>¥80/台</span>
+        </li>
+        <li class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1">
+            <span>2</span>
+            <span>交易分润</span><br>
+            <span>依交易额而定</span>
+        </li>
+        <li class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="2">
+            <span>3</span>
+            <span>管理津贴</span><br>
+            <span>依交易分润差额</span>
+        </li>
+        <li class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="3">
+            <span>4</span>
+            <span>钻石奖金</span><br>
+            <span>依达标合伙人数</span>
+        </li>
+
+
+        <li class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="0">
+            <span>1</span>
+            <span>激活补贴</span><br>
+            <span>¥80/台</span>
+        </li>
+        <li class="swiper-slide" data-swiper-slide-index="1">
+            <span>2</span>
+            <span>交易分润</span><br>
+            <span>依交易额而定</span>
+        </li>
+        <li class="swiper-slide swiper-slide-prev" data-swiper-slide-index="2">
+            <span>3</span>
+            <span>管理津贴</span><br>
+            <span>依交易分润差额</span>
+        </li>
+        <li class="swiper-slide swiper-slide-active" data-swiper-slide-index="3">
+            <span>4</span>
+            <span>钻石奖金</span><br>
+            <span>依达标合伙人数</span>
+        </li>
+        <li class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0">
+            <span>1</span>
+            <span>激活补贴</span><br>
+            <span>¥80/台</span>
+        </li>
+        <li class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1">
+            <span>2</span>
+            <span>交易分润</span><br>
+            <span>依交易额而定</span>
+        </li>
+        <li class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="2">
+            <span>3</span>
+            <span>管理津贴</span><br>
+            <span>依交易分润差额</span>
+        </li>
+        <li class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="3">
+            <span>4</span>
+            <span>钻石奖金</span><br>
+            <span>依达标合伙人数</span>
+        </li>
+    </ul>
+</div>
+<div class="img-title-2">
+    <div class="line"></div>
+    <img src="./register_files/img-title-2@2x.png">
+</div>
+<img src="./register_files/img-platform-content@2x.png" class="img_platform_content">
+<script src="./register_files/swiper-4.1.6.min.js"></script>
+<script src="./register_files/jquery.min.js"></script>
+<script src="./register_files/md5.min.js"></script>
+<script>
+    /** 获取请求参数 */
+    function decode(s) {
+        return s == null ? s : decodeURIComponent(s);
+    }
+
+    function formJson(data, k, v) {
+        if (Object.prototype.toString.call(data[k]) === '[object Array]') {
+            data[k].push(v);
+        } else if (data[k] != null) {
+            data[k] = [data[k], v];
+        } else {
+            data[k] = v;
+        }
+    }
+
+    function getParam() {
+        const param = (location.search && location.search.split("?")[1]).split(/[?&#]/);
+        const json = {};
+        for (var i = 0; i < param.length; i++) {
+            if (param[i]) {
+                var j = param[i].split("=");
+                if (j) {
+                    formJson(json, decode(j[0]), decode(j[1]));
+                }
+            }
+        }
+        return json;
+    }
+
+    var referKey = getParam().referKey;
+    var name = "";
+    $.ajax({
+        url: "http://127.0.0.1:8760/api/oauth/anno/checkCode?code=" + referKey,
+        type: "get",
+        async: false,
+        headers: {tenant: window.btoa(getParam().tenant)},
+        success: function (data) {
+            console.log(data.data.name)
+            if (data.isSuccess = false) {
+                window.location.href = "invalid.html";
+                return;
+            }
+            if (data != null) {
+                name = data.data.name;
+            }
+        }
+    });
+
+    document.title = name + "邀请你加入靠谱伙伴";
+    document.getElementById("invite_man_name").innerHTML = name;
+    var setBefore = parseFloat(window.innerWidth || document.body.clientWidth || document.documentElement.clientWidth) / 2 - parseFloat(window.getComputedStyle(document.getElementsByClassName("swiper-slide")[1]).width) / 2
+    var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        slidesPerView: 'auto',
+        loopedSlides: 7,
+        slidesOffsetBefore: setBefore,
+        autoplay: true
+    });
+    var canSend = true;
+
+    //发送短信验证码
+    function sendCode(mobile) {
+        if (canSend) {
+            $.ajax({
+                url: "http://127.0.0.1:8760/api/msgs/anno/sms/send",
+                type: "post",
+                // dataType: "json",
+                async: false,
+                headers: {tenant: window.btoa(getParam().tenant)},
+                contentType: "application/json",
+                data: JSON.stringify({mobile: mobile}),
+                success: function (data) {
+                    if (data.isSuccess) {
+                        document.getElementById("join").style.display = "none";
+                        document.getElementById("join_soon").style.display = "block";
+                        document.getElementById("carousel").style.top = "16.65rem";
+                        document.getElementsByTagName("body")[0].style.minHeight = "28.94rem";
+                        document.getElementById("tel_num").innerHTML = document.getElementById("phone_num").value.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2');
+                        var count = 60;
+
+                        function countDown() {
+                            if (count > 0) {
+                                canSend = false;
+                                count--;
+                                document.getElementById("re_send").innerHTML = count + "s";
+                            } else {
+                                canSend = true;
+                                document.getElementById("re_send").innerHTML = "重新发送";
+                                count = 60;
+                                clearInterval(countKey);
+                            }
+                        }
+
+                        countDown();
+                        var countKey = setInterval(countDown, 1000);
+                    } else {
+                        alert(data.message);
+                    }
+                }
+            });
+        }
+    }
+
+    //确认按钮
+    document.getElementById("submit").onclick = function () {
+        if (document.getElementById("join").style.display != "none") { //发送验证码
+            if (/^(((1(3|4|5|6|7|8|9)[0-9]{1}))+\d{8})$/.test(document.getElementById("phone_num").value)) {
+                sendCode(document.getElementById("phone_num").value);
+            } else {
+                alert("请输入11位有效手机号");
+            }
+        } else { //设置密码
+            var code = document.getElementById("identifying_code").value;
+            var password = document.getElementById("login_password").value.trim();
+            if (code.length != 6 || !/^\d{6}$/.test(code)) {
+                alert("请核对验证码");
+                return;
+            }
+            if (!password || password.length < 6 || password.length > 16) {
+                alert("登录密码需在6-16位");
+            }
+            $.ajax({
+                url: "http://127.0.0.1:8760/api/oauth/anno/register",
+                type: "post",
+                dataType: "json",
+                contentType: "application/json",
+                 headers: {tenant: window.btoa(getParam().tenant)},
+                data: JSON.stringify({
+                    code: code,
+                    mobile: document.getElementById("phone_num").value,
+                    createUser: referKey,
+                    password: password
+                }),
+                success: function (data) {
+                    alert(data.msg);
+                    if (data.isSuccess) {
+                        window.location.href = "https://yun.bizika.cloud/h5/download";
+                    }
+                }
+            });
+        }
+    };
+</script>
+
+
+</body>
+</html>
