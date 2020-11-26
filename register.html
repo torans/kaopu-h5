@@ -508,8 +508,9 @@
 
     var referKey = getParam().referKey;
     var name = "";
+    console.log(window.btoa(getParam().tenant))
     $.ajax({
-        url: "http://127.0.0.1:8760/api/oauth/anno/checkCode?code=" + referKey,
+        url: "http://api.cloud.bizika.cloud/api/oauth/anno/checkCode?code=" + referKey,
         type: "get",
         async: false,
         headers: {tenant: window.btoa(getParam().tenant)},
@@ -541,7 +542,7 @@
     function sendCode(mobile) {
         if (canSend) {
             $.ajax({
-                url: "http://127.0.0.1:8760/api/msgs/anno/sms/send",
+                url: "http://api.cloud.bizika.cloud/api/msgs/anno/sms/send",
                 type: "post",
                 // dataType: "json",
                 async: false,
@@ -599,7 +600,7 @@
                 alert("登录密码需在6-16位");
             }
             $.ajax({
-                url: "http://127.0.0.1:8760/api/oauth/anno/register",
+                url: "http://api.cloud.bizika.cloud/api/oauth/anno/register",
                 type: "post",
                 dataType: "json",
                 contentType: "application/json",
