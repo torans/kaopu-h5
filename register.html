@@ -506,22 +506,24 @@
         return json;
     }
 
-    var referKey = getParam().referKey;
-    var name = "";
-    console.log(window.btoa(getParam().tenant))
+    const referKey = getParam().referKey;
+    let name = "";
     $.ajax({
         url: "http://api.cloud.bizika.cloud/api/oauth/anno/checkCode?code=" + referKey,
         type: "get",
         async: false,
         headers: {tenant: window.btoa(getParam().tenant)},
         success: function (data) {
-            console.log(data.data.name)
-            if (data.isSuccess = false) {
+            if (data != null) {
+                name = data.data.name;
+            }
+            if (data.code !== 0) {
                 window.location.href = "invalid.html";
                 return;
             }
-            if (data != null) {
-                name = data.data.name;
+            if (data.isSuccess === false) {
+                window.location.href = "invalid.html";
+                return;
             }
         }
     });
@@ -550,6 +552,10 @@
                 contentType: "application/json",
                 data: JSON.stringify({mobile: mobile}),
                 success: function (data) {
+                    if (data.code !== 0) {
+                        alert(data.msg)
+                        return;
+                    }
                     if (data.isSuccess) {
                         document.getElementById("join").style.display = "none";
                         document.getElementById("join_soon").style.display = "block";
@@ -574,7 +580,7 @@
                         countDown();
                         var countKey = setInterval(countDown, 1000);
                     } else {
-                        alert(data.message);
+                        alert(data.msg);
                     }
                 }
             });
@@ -604,7 +610,7 @@
                 type: "post",
                 dataType: "json",
                 contentType: "application/json",
-                 headers: {tenant: window.btoa(getParam().tenant)},
+                headers: {tenant: window.btoa(getParam().tenant)},
                 data: JSON.stringify({
                     code: code,
                     mobile: document.getElementById("phone_num").value,
